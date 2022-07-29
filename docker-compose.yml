@@ -1,0 +1,8 @@
+services:
+  python_codefresh:
+    build: .
+    environment:
+      PATH_CONFIGMAP: "configmap.yml"
+      PATH_SECRET: "secret.yml"
+      CONFIGMAP: "nome=thiago,idade=22"
+      SECRET: "nome=santos,idade=23"
