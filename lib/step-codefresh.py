@@ -9,7 +9,9 @@ if ENV_FILE:
 
 def read_json(path):
     arq = open(path)
-    return json.loads(arq.read().replace("\n", ""))
+    arq_check = arq.read().replace("\n", "")
+    print(f"conteudo = {arq_check}")
+    return json.loads(arq_check)
     
 def writer_json(date, path):
     with open(path, "w") as outfile:
