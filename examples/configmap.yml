@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata":
+    {
+      "name": "{{app_name}}-configmap",
+      "namespace": "{{project_name}}-{{enviroment}}",
+    },
+  "data": {}
+}
