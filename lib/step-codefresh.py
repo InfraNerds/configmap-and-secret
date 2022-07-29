@@ -10,7 +10,6 @@ if ENV_FILE:
 def read_json(path):
     arq = open(path)
     arq_check = arq.read().replace("\n", "")
-    print(f"conteudo = {arq_check}")
     return json.loads(arq_check)
     
 def writer_json(date, path):
@@ -31,7 +30,6 @@ if path_configmap and envs_configmap:
         value=item.split("=")[1]
         list_configmap.get('data')[key]=value
     writer_json(list_configmap, path_configmap)
-    print(list_configmap)
 
 if path_secret and envs_secret:
     list_secret=read_json(path_secret)
@@ -40,7 +38,4 @@ if path_secret and envs_secret:
         value=item.split("=")[1]
         list_secret.get('stringData')[key]=value   
     writer_json(list_secret, path_secret)
-    print(list_secret)
     
-# path_configmap=getEnvs("path_configmap","/codefresh/volume/nome.json")
-# path_secret=getEnvs("path_secret","/codefresh/volume/nome.json")
