@@ -37,7 +37,7 @@ steps:
         - 'pass=pass'
   
   Show teplates:
-     title: 'Define Environment'
+     title: 'Show result templates'
      stage: "Clone"
      image: codefreshio/ci-helpers
      fail_fast: false
@@ -48,6 +48,7 @@ steps:
 ```
 
 **Example Templates Required:**
+
 ConfigMap
 ```json
 {
@@ -72,6 +73,7 @@ Secret
 
 
 **Result:**
+
 ConfigMap
 ```json
 {
