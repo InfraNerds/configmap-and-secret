@@ -81,8 +81,10 @@ ConfigMap
   "kind": "ConfigMap",
   "metadata":
     { "name": "${app_name}-configmap", "namespace": "${project_name}" },
-  "data": {"url":"http://example.com","port":"3000"
-}
+  "data": {
+    "url":"http://example.com",
+    "port":"3000"
+  }
 }
 ```
 Secret
@@ -92,6 +94,9 @@ Secret
   "kind": "Secret",
   "metadata": { "name": "${app_name}-configmap", "namespace": "${project_name}" },
   "type": "Opaque",
-  "stringData": {"user":"user","pass":"pass"}
+  "stringData": {
+    "user":"user",
+    "pass":"pass"
+  }
 }
 ```
